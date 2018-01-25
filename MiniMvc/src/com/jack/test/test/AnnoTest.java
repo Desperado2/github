@@ -1,4 +1,4 @@
-package com.jack.test;
+package com.jack.test.test;
 
 
 import java.io.File;
@@ -17,7 +17,8 @@ import com.jack.anno.Autowired;
 import com.jack.anno.Controller;
 import com.jack.anno.RequestMapping;
 import com.jack.anno.Service;
-import com.jack.controller.CustomerController;
+import com.jack.test.controller.CustomerController;
+
 
 public class AnnoTest {
 	

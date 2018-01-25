@@ -1,7 +1,8 @@
-package com.jack.Service.impl;
+package com.jack.test.service.impl;
 
-import com.jack.Service.CustomerDao;
+
 import com.jack.anno.Service;
+import com.jack.test.service.CustomerDao;
 
 @Service("customerService")
 public class CustomerDaoImpl implements CustomerDao {

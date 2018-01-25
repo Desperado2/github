@@ -1,4 +1,4 @@
-package com.jack.test;
+package com.jack.test.test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
