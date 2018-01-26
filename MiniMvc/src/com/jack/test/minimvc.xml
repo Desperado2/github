@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mv:bean xmlns:mv="http://www.example.org/jack" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.example.org/jack ../xml/minimvc.xsd ">
+<mv:beans xmlns:mv="http://www.example.org/jack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/jack ../xml/minimvc.xsd ">
   <mv:scan-package>com.jack.test</mv:scan-package>
-</mv:bean>
+  <mv:view>
+    <mv:content-type>mv:content-type</mv:content-type>
+    <mv:prefix>mv:prefix</mv:prefix>
+    <mv:suffix>mv:suffix</mv:suffix>
+  </mv:view>
+</mv:beans>

@@ -24,10 +24,10 @@ public class XmlParse {
 			//获取xml配置文件，创建inputstream
 			InputStream inputStream = this.getClass().getClassLoader().getResource("minimvc.xml").openStream();
 			//根据xml对象的对象的class创建JASB
-			JAXBContext jaxbContext = JAXBContext.newInstance(Bean.class);
+			JAXBContext jaxbContext = JAXBContext.newInstance(Beans.class);
 			//解析xml
 			Unmarshaller unmarshaller =jaxbContext.createUnmarshaller();
-			Bean bean= (Bean) unmarshaller.unmarshal(inputStream);
+			Beans bean= (Beans) unmarshaller.unmarshal(inputStream);
 			map = MapAndJavaBeanCovertUtils.objectToMap(bean);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -43,15 +43,13 @@ public class XmlParse {
 	public Map<String,Object> getConfig(String xmlName){
 		Map<String,Object> map = new HashMap<String, Object>();
 		try {
-			URL url1 = this.getClass().getClassLoader().getSystemResource(xmlName);
-			URL url =this.getClass().getClassLoader().getResource(xmlName);
 			//获取xml配置文件，创建inputstream
 			InputStream inputStream = this.getClass().getClassLoader().getResource(xmlName).openStream();
 			//根据xml对象的对象的class创建JASB
-			JAXBContext jaxbContext = JAXBContext.newInstance(Bean.class);
+			JAXBContext jaxbContext = JAXBContext.newInstance(Beans.class);
 			//解析xml
 			Unmarshaller unmarshaller =jaxbContext.createUnmarshaller();
-			Bean bean= (Bean) unmarshaller.unmarshal(inputStream);
+			Beans bean= (Beans) unmarshaller.unmarshal(inputStream);
 			map = MapAndJavaBeanCovertUtils.objectToMap(bean);
 		} catch (Exception e) {
 			e.printStackTrace();
